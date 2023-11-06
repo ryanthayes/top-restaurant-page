@@ -6,7 +6,7 @@ export default function menu() {
     const menuTitle = createHtmlElement('h1', null, ['title'], 'Our Menu', header);
     const menuBlurb = createHtmlElement('p', null, ['menu-header__blurb'], 'We pride ourself on using only the freshest ingredients with a focus on locally sourced ingredients whenever possible.', header);
 
-    const menuSection = createHtmlElement('section', null, ['menu'], null, null);
+    const menuSection = createHtmlElement('section', null, ['menu'], null, main);
     const container = createHtmlElement('div', null, ['container'], null, menuSection);
     const cardContainer = createHtmlElement('div', null, ['menu-card__container'], null, container);
 
@@ -54,9 +54,9 @@ export default function menu() {
       const newCard = document.createElement('div');
       newCard.className = 'card card--menu';
       
-      const cardImage = document.createElement('img');
-      cardImage.setAttribute("src", card.src);
-      cardImage.className = 'card-img';
+    //   const cardImage = document.createElement('img');
+    //   cardImage.setAttribute("src", card.src);
+    //   cardImage.className = 'card-img';
       
       const cardTitle = document.createElement('h2');
       cardTitle.innerText = card.title;
@@ -70,7 +70,7 @@ export default function menu() {
       cardPrice.innerText = card.price;
       cardPrice.className = 'card-price'
       
-      newCard.appendChild(cardImage, cardTitle, cardBody, cardPrice);
+      newCard.appendChild(cardTitle, cardBody, cardPrice);
       cardContainer.appendChild(newCard);
       
       };
