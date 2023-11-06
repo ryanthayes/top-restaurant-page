@@ -8,7 +8,7 @@ export default function footer() {
     
     const container = createHtmlElement('div', null, ['container', 'three-col', 'justify-content-between'], null, footer);
 
-    const logo = createImg('footer-logo', Logo, container);
+    const logo = createImg('footer-logo', Logo, '150px', null, container);
 
     const location = createHtmlElement('div', null, null, null, container);
     const locationTitle = createHtmlElement('h3', null, ['title--sm', '|', 'mb-sm'], 'Location', location);

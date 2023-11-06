@@ -1,3 +1,5 @@
+import Logo from './images/logo.png';
+
 import { createHtmlElement, createImg } from "./dom-elements"
 
 export default function header() {
@@ -6,7 +8,7 @@ export default function header() {
     const nav = createHtmlElement('nav', 'nav-bar', ['nav-bar'], null, header);
     const container = createHtmlElement('div', null, ['container', '|', 'flex', 'justify-content-between'], null, nav);
     
-    // const logo = createImg('site-logo', Logo, container);
+    const logo = createImg('site-logo', Logo, '150px', null, container);
 
     const primaryNav = createHtmlElement('ul', null, ['primary-nav', '|', 'flex', 'gap-md', 'align-items-center'], null, container);
     const home = createHtmlElement('li', null, ['primary-nav__items'], null, primaryNav);
