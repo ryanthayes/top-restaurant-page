@@ -19,6 +19,26 @@ export const createImg = (classes, src, width, height, parent) => {
   return newImg;
 };
 
+export const createFormLabel = (input, classes, content, parent) => {
+  const label = document.createElement('label');
+  label.setAttribute('for', input);
+  label.setAttribute('class', classes);
+  label.innerText = content;
+  parent.appendChild(label);
+  return label;
+};
+
+export const createFormInput = (type, id, name, classes, placeholder, parent) => {
+  const input = document.createElement('input');
+  input.setAttribute('type', type);
+  input.setAttribute('id', id);
+  input.setAttribute('name', name);
+  input.setAttribute('class', classes);
+  input.setAttribute('placeholder', placeholder);
+  parent.appendChild(input);
+  return input;
+};
+
 // export const createCard = (src, item, description, price, parent) => {
 //   const newCard = document.createElement('div');
 //   newCard.setAttribute('class', ['card', 'card--menu']);

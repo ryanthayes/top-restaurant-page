@@ -3,8 +3,9 @@ import { createHtmlElement } from "./dom-elements";
 export default function menu() {
     const main = document.createElement('main');
     const header = createHtmlElement('header',null, ['menu-header'], null, main);
-    const menuTitle = createHtmlElement('h1', null, ['title'], 'Our Menu', header);
-    const menuBlurb = createHtmlElement('p', null, ['menu-header__blurb'], 'We pride ourself on using only the freshest ingredients with a focus on locally sourced ingredients whenever possible.', header);
+    const headerContainer = createHtmlElement('div', null, ['container'], null, header)
+    const menuTitle = createHtmlElement('h1', null, ['title'], 'Our Menu', headerContainer);
+    const menuBlurb = createHtmlElement('p', null, ['menu-header__blurb'], 'We pride ourself on using only the freshest ingredients with a focus on locally sourced ingredients whenever possible.', headerContainer);
 
     const menuSection = createHtmlElement('section', null, ['menu'], null, main);
     const container = createHtmlElement('div', null, ['container'], null, menuSection);
@@ -54,23 +55,23 @@ export default function menu() {
       const newCard = document.createElement('div');
       newCard.className = 'card card--menu';
       
-    //   const cardImage = document.createElement('img');
-    //   cardImage.setAttribute("src", card.src);
-    //   cardImage.className = 'card-img';
+      const cardImage = document.createElement('img');
+      cardImage.setAttribute("src", card.src);
+      cardImage.className = 'menu-card__img';
       
       const cardTitle = document.createElement('h2');
       cardTitle.innerText = card.title;
-      cardTitle.className = 'card-title';
+      cardTitle.className = 'menu-card__title';
       
       const cardBody = document.createElement('p');
       cardBody.innerText = card.body;
-      cardBody.className = 'card-body';
+      cardBody.className = 'menu-card__body';
       
       const cardPrice = document.createElement('p');
       cardPrice.innerText = card.price;
-      cardPrice.className = 'card-price'
+      cardPrice.className = 'menu-card__price'
       
-      newCard.appendChild(cardTitle, cardBody, cardPrice);
+      newCard.append(cardImage, cardTitle, cardBody, cardPrice);
       cardContainer.appendChild(newCard);
       
       };
