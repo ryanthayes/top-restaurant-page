@@ -9,30 +9,40 @@ export default function header() {
     const container = createHtmlElement('div', null, ['container', '|', 'flex', 'justify-content-between'], null, nav);
     
     const logo = createImg('site-logo', Logo, '150px', null, container);
+    logo.setAttribute('href', '#');
+    logo.id = 'home';
 
     const primaryNav = createHtmlElement('ul', null, ['primary-nav', '|', 'flex', 'gap-md', 'align-items-center'], null, container);
     const home = createHtmlElement('li', null, ['primary-nav__items'], null, primaryNav);
-    const homeLink = document.createElement('a');
-    homeLink.setAttribute('href', '#');
-    homeLink.innerText = 'Home';
-    home.appendChild(homeLink);
-    const menu = createHtmlElement('li', null, ['primary-nav__items'], null, primaryNav);
-    const menuLink = document.createElement('a');
-    menuLink.setAttribute('href', '#');
-    menuLink.innerText = 'Menu';
-    menu.appendChild(menuLink);
+    
+    // const homeLink = document.createElement('a');
+    // homeLink.setAttribute('href', '#');
+    // homeLink.id = 'home'
+    // homeLink.innerText = 'Home';
+    // home.appendChild(homeLink);
+    
     const about = createHtmlElement('li', null, ['primary-nav__items'], null, primaryNav);
     const aboutLink = document.createElement('a');
     aboutLink.setAttribute('href', '#');
+    aboutLink.id = 'about'
     aboutLink.innerText = 'About';
     about.appendChild(aboutLink);
+    
+    const menu = createHtmlElement('li', null, ['primary-nav__items'], null, primaryNav);
+    const menuLink = document.createElement('a');
+    menuLink.setAttribute('href', '#');
+    menuLink.id = 'menu'
+    menuLink.innerText = 'Menu';
+    menu.appendChild(menuLink);
+   
     const contact = createHtmlElement('li', null, ['primary-nav__items'], null, primaryNav);
     const contactLink = document.createElement('a');
     contactLink.setAttribute('href', '#');
-    contactLink.innerText = 'Contact Us';
+    contactLink.id = 'contact'
+    contactLink.innerText = 'Contact';
     contact.appendChild(contactLink);
 
-    const button = createHtmlElement('button', null, ['btn'], 'Book A Table', container);
+    const button = createHtmlElement('button', 'reservationsNavBtn', ['btn'], 'Book A Table', container);
 
     return header;
 }

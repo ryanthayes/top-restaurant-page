@@ -1,3 +1,10 @@
+import acaiBowl from './images/vicky-ng-yIh0i6TYGrs-unsplash.jpg';
+import avocadoToast from './images/alexandra-kusper-7MqA9uQZc2Y-unsplash.jpg';
+import eggsFlorentine from './images/maddi-bazzocco-j3gz0KReZbA-unsplash.jpg';
+import shrimpBenedict from './images/jennifer-latuperisa-andresen-247JU9v0S8A-unsplash.jpg';
+import frenchToast from './images/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg';
+import flapJacks from './images/jaqueline-pelzer-MytHEJlzdcM-unsplash.jpg';
+
 import { createHtmlElement } from "./dom-elements";
 
 export default function menu() {
@@ -14,37 +21,37 @@ export default function menu() {
     let cards = [
         {
           title: 'Acai Bowl',
-          src: 'images/vicky-ng-yIh0i6TYGrs-unsplash.jpg',
+          src: acaiBowl,
           body: 'Lorem ipsum dolor sit amet.',
           price: '$12.99',
         },
         {
           title: 'Avocado Toast',
-          src: 'images/alexandra-kusper-7MqA9uQZc2Y-unsplash.jpg',
+          src: avocadoToast,
           body: 'Lorem ipsum dolor sit amet.',
           price: '$12.99',
         },
         {
           title: 'Eggs Florentine',
-          src: 'images/maddi-bazzocco-j3gz0KReZbA-unsplash.jpg',
+          src: eggsFlorentine,
           body: 'Lorem ipsum dolor sit amet.',
           price: '$15.99',
         },
         {
           title: 'Shrimp Benedict',
-          src: 'images/jennifer-latuperisa-andresen-247JU9v0S8A-unsplash.jpg',
+          src: shrimpBenedict,
           body: 'Lorem ipsum dolor sit amet.',
           price: '$18.99',
         },
         {
           title: 'French Toast',
-          src: 'images/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg',
+          src: frenchToast,
           body: 'Lorem ipsum dolor sit amet.',
           price: '$12.99',
         },
         {
           title: 'Flapjacks',
-          src: 'images/jaqueline-pelzer-MytHEJlzdcM-unsplash.jpg',
+          src: flapJacks,
           body: 'Lorem ipsum dolor sit amet.',
           price: '$14.99',
         }

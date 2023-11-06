@@ -157,6 +157,7 @@
 }
 
 .site-logo {
+    cursor: pointer;
     max-width: 150px;
 }
 
@@ -186,6 +187,12 @@
 
 .hero-blurb {
     margin-bottom: var(--spacing-sm);
+}
+
+.hero-btn__container {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
 }
 
 /* === FOOTER === */
@@ -244,6 +251,18 @@
     grid-column: 1 / 3; 
 }
 
+/* === ABOUT PAGE === */
+
+.about-hero {
+    margin: var(--spacing-lg) auto;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* === MENU PAGE === */
 
 .menu-header {
@@ -262,6 +281,11 @@
 .card--menu {
     max-width: 300px;
     text-align: center;
+}
+
+.menu-card__img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
 }
 
 .menu-card__title {
@@ -283,41 +307,9 @@
 
 /* === CONTACT US PAGE === */
 
-.contact-header {
+.contact-header, .reservations-header {
     margin-top: var(--spacing-lg);
     text-align: center;
-}
-
-.contact-form {
-    margin: var(--spacing-md) auto;
-    padding: var(--spacing-md);
-    background: var(--clr-primary-100);
-    border-radius: var(--br-md);
-    box-shadow: var(--shadow);
-}
-
-.contact-form__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-sm);
-}
-
-.contact-form__group {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xs);
-}
-
-.contact-form__label {
-    font-weight: var(--fw-semibold);
-    color: var(--clr-primary-900);
-}
-.contact-form__input {
-    padding: var(--spacing-xs);
-    font-size: var(--fs-300);
-    background-color: var(--clr-primary-200);
-    border: 0;
-    border-radius: var(--br-lg);
 }
 
 .contact-form__label--subject {
@@ -326,6 +318,41 @@
 .contact-form__label--message {
     grid-column: 1 / span 2;
 }
+
+/* === FORMS === */
+
+.form {
+    margin: var(--spacing-lg) auto;
+    padding: var(--spacing-md);
+    background: var(--clr-primary-100);
+    border-radius: var(--br-md);
+    box-shadow: var(--shadow);
+}
+
+.form__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.form__label {
+    font-weight: var(--fw-semibold);
+    color: var(--clr-primary-700);
+}
+.form__input {
+    padding: var(--spacing-xs);
+    font-size: var(--fs-300);
+    background-color: var(--clr-primary-200);
+    border: 0;
+    border-radius: var(--br-lg);
+}
+
 
 /* === BUTTONS === */
 
@@ -364,7 +391,7 @@
     padding: 0 var(--spacing-sm);
     margin: 0 auto;
 }
-.container--hero {
+.container--small {
     max-width: 75ch;
     padding: var(--spacing-lg);
     margin: 0 auto;
@@ -382,7 +409,7 @@
 .two-col {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
 }
 .flex {
     display: flex;

@@ -38,27 +38,3 @@ export const createFormInput = (type, id, name, classes, placeholder, parent) =>
   parent.appendChild(input);
   return input;
 };
-
-// export const createCard = (src, item, description, price, parent) => {
-//   const newCard = document.createElement('div');
-//   newCard.setAttribute('class', ['card', 'card--menu']);
-  
-//   const cardImage = document.createElement('img');
-//   cardImage.setAttribute('class', 'card-img');
-//   cardImage.setAttribute('src', src);
-//   cardImage.style.width = '150px';
-  
-//   const cardItem = document.createElement('h2');
-//   cardItem.innerText = item;
-
-//   const cardDescription = document.createElement('p');
-//   cardDescription.setAttribute('class', 'card-desc');
-//   cardDescription.innerText = description;
-
-//   const cardPrice = document.createElement('p');
-//   cardPrice.setAttribute('class', 'card-price');
-//   cardPrice.innerText = price;
-
-//   parent.appendChild(newCard);
-//   newCard.appendChild(cardImage, cardItem, cardDescription, cardPrice); 
-// }

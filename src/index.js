@@ -1,8 +1,10 @@
 import footer from "./footer";
 import header from "./header";
 import home from "./home";
+import about from "./about";
 import menu from "./menu";
 import contact from "./contact";
+import reservations from "./reservations";
 import './style.css';
 
 // const removeActive = () => {
@@ -11,28 +13,46 @@ import './style.css';
 //     });
 // };
 
+const contentWrapper = document.querySelector('#content');
+const content = document.createElement('div');
+contentWrapper.append(header(), content, footer());
+content.append(home());
+
+const navItems = document.querySelectorAll('.primary-nav__items');
+const siteLogo = document.querySelector('#home');
+const aboutPage = document.querySelector('#about');
+const menuPage = document.querySelector('#menu');
+const contactPage = document.querySelector('#contact');
+const reservationsNavBtn = document.querySelector('#reservationsNavBtn');
+const reservationsHeroBtn = document.querySelector('#reservationsHeroBtn');
+const menuBtn = document.querySelector('#menuBtn');
+
+
 const renderHome = () => {
-    const content = document.querySelector('#content');
     // removeActive();
-    content.appendChild(header());
-    content.appendChild(home());
-    content.appendChild(footer());
+    content.replaceChildren(home());
 };
-
+const renderAbout = () => {
+    // removeActive();
+    content.replaceChildren(about());
+};
 const renderMenu = () => {
-    const content = document.querySelector('#content');
     // removeActive();
-    content.appendChild(header());
-    content.appendChild(menu());
-    content.appendChild(footer());
+    content.replaceChildren(menu());
 };
-
 const renderContact = () => {
-    const content = document.querySelector('#content');
     // removeActive();
-    content.appendChild(header());
-    content.appendChild(contact());
-    content.appendChild(footer());
+    content.replaceChildren(contact());
+};
+const renderReservations = () => {
+    // removeActive();
+    content.replaceChildren(reservations());
 };
 
-renderContact();
+siteLogo.addEventListener('click', renderHome);
+aboutPage.addEventListener('click', renderAbout);
+menuPage.addEventListener('click', renderMenu);
+contactPage.addEventListener('click', renderContact);
+reservationsNavBtn.addEventListener('click', renderReservations);
+reservationsHeroBtn.addEventListener('click', renderReservations);
+menuBtn.addEventListener('click', renderMenu);
