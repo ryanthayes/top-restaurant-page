@@ -32,7 +32,7 @@ It was a little challenging at first for me to wrap my head around. It is a lot 
 
 ### Live Version
 
-[Restaurant Page](https://ryanthayes.github.io/restaurant-page/)
+[Restaurant Page](https://ryanthayes.github.io/top-restaurant-page/)
 
 ### Built With
 
