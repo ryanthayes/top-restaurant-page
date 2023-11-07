@@ -7,18 +7,11 @@ import contact from "./contact";
 import reservations from "./reservations";
 import './style.css';
 
-// const removeActive = () => {
-//     navItems.forEach((item) => {
-//         item.classList.remove('active');
-//     });
-// };
-
 const contentWrapper = document.querySelector('#content');
 const content = document.createElement('div');
 contentWrapper.append(header(), content, footer());
 content.append(home());
 
-const navItems = document.querySelectorAll('.primary-nav__items');
 const siteLogo = document.querySelector('#home');
 const aboutPage = document.querySelector('#about');
 const menuPage = document.querySelector('#menu');
@@ -28,6 +21,12 @@ const reservationsHeroBtn = document.querySelector('#reservationsHeroBtn');
 const menuBtn = document.querySelector('#menuBtn');
 
 
+// const removeActive = () => {
+//     navItems.forEach((item) => {
+//         item.classList.remove('active');
+//     });
+// };
+
 const renderHome = () => {
     // removeActive();
     content.replaceChildren(home());
@@ -35,14 +34,17 @@ const renderHome = () => {
 const renderAbout = () => {
     // removeActive();
     content.replaceChildren(about());
+    // aboutPage.classList.add('active');
 };
 const renderMenu = () => {
     // removeActive();
     content.replaceChildren(menu());
+    // menuPage.classList.add('active');
 };
 const renderContact = () => {
     // removeActive();
     content.replaceChildren(contact());
+    // contactPage.classList.add('active');
 };
 const renderReservations = () => {
     // removeActive();

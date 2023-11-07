@@ -15,12 +15,6 @@ export default function header() {
     const primaryNav = createHtmlElement('ul', null, ['primary-nav', '|', 'flex', 'gap-md', 'align-items-center'], null, container);
     const home = createHtmlElement('li', null, ['primary-nav__items'], null, primaryNav);
     
-    // const homeLink = document.createElement('a');
-    // homeLink.setAttribute('href', '#');
-    // homeLink.id = 'home'
-    // homeLink.innerText = 'Home';
-    // home.appendChild(homeLink);
-    
     const about = createHtmlElement('li', null, ['primary-nav__items'], null, primaryNav);
     const aboutLink = document.createElement('a');
     aboutLink.setAttribute('href', '#');

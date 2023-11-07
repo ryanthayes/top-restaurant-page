@@ -170,9 +170,9 @@
     text-decoration: none;
 }
 
-.social-icons {
-    cursor: pointer;
-    fill: var(--clr-neutral-100);
+.primary-nav__items a:hover,
+.active {
+    color: var(--clr-primary-800);
 }
 
 /* === HERO SECTION === */
@@ -222,34 +222,6 @@
 
 /* === RESERVATION PAGE === */
 
-.reservations-form {
-    max-width: 600px;
-    margin: var(--spacing-md) auto;
-    padding: var(--spacing-md);
-    border-radius: var(--br-md);
-    box-shadow: var(--shadow);
-}
-
-.reservations-label {
-    margin-bottom: var(--spacing-xs);
-    font-weight: var(--fw-bold);
-    color: var(--clr-primary-700);
-}
-.reservations-input {
-    margin-bottom: var(--spacing-sm);
-    padding: var(--spacing-xs);
-    border: 1px solid var(--clr-neutral-300);
-    border-radius: var(--br-lg);
-    color: var(--clr-neutral-400);
-}
-
-.party-size {
-    grid-column: 1 / 3;
-}
-
-.btn--reservation {
-    grid-column: 1 / 3; 
-}
 
 /* === ABOUT PAGE === */
 
@@ -352,7 +324,6 @@
     border: 0;
     border-radius: var(--br-lg);
 }
-
 
 /* === BUTTONS === */
 
